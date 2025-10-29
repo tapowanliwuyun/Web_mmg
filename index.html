@@ -144,12 +144,16 @@
           </div>
           <div class="content has-text-justified">
             <p>
-              MMG-Gaussian employs a Multi-Meta Geometric Gaussians representation to enhance the accuracy and adaptability of 3D scene reconstruction. First, gaussians are categorized into point, line, and surface types to precisely capture different geometric and texture features. Then, leveraging the Multi-Meta Gaussians Evolution, we introduce the concepts of Strong and Weak Gaussians. Strong Gaussians remain stable during optimization to accurately represent scene structures, while Weak Gaussians exhibit greater adaptability, dynamically adjusting their types. Through splitting, cloning, and merging operations, the density is effectively controlled to better fit different regions. Finally, an Incremental Gaussians Generation strategy is adopted, utilizing a convolution-based approach to iteratively fill under-reconstructed areas, enhancing scene completeness and reconstruction accuracy, ultimately achieving high-fidelity 3D Gaussian reconstruction.
+              MMG-Gaussian employs a Multi-Meta Geometric Gaussian representation to enhance the accuracy and adaptability of 3D scene reconstruction. First, gaussians are categorized into point, line, and surface types to precisely capture different geometric and texture features. Then, leveraging the Multi-Meta Gaussian Evolution, we introduce the concepts of Strong and Weak Gaussians. Strong Gaussians remain stable during optimization to accurately represent scene structures, while Weak Gaussians exhibit greater adaptability, dynamically adjusting their types. Through splitting, cloning, and merging operations, the density is effectively controlled to better fit different regions. Finally, an Incremental Gaussian Generation strategy is adopted, utilizing a convolution-based approach to iteratively fill under-reconstructed areas, enhancing scene completeness and reconstruction accuracy, ultimately achieving high-fidelity 3D Gaussian reconstruction.
             </p>
           </div>
           <div class="item">
             <!-- Your image here -->
             <img src="static/images/method1_vweb.png" alt="MY ALT TEXT" style="width: 100%; height: auto;"/>
+          </div>
+            <div class="content has-text-justified">
+            <p>
+              Overview of Multi-Meta Gaussian Evolution. Weak Gaussians are reclassified at fixed intervals, with stability quantified by the Type-Retention Score (TRS); high-TRS instances are promoted to Strong Gaussians. Building on Clone, we refine Split and introduce Merge: Split uses anisotropy and scene scale to decompose overly elongated or large Line/Surface Gaussians into Weak Point Gaussians, whereas Merge consolidates same-type Weak Gaussians that are sufficiently small and spatially clustered, thereby reducing redundancy.
           </div>
       </div>
     </div>
